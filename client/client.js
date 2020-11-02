@@ -1,4 +1,3 @@
-const { sendNotification } = require("web-push");
 
 const publicKey = 'BBIbJQXo08xie0qXrQQEWfBhjsrfWKXeXVjru3QfC3jSA3UJsEt9REJOFI1EnW86oJW_YCQhaFuydRdSe8Gag50';
 
@@ -22,7 +21,7 @@ async function send() {
 	const subscription = await register.pushManager.subscribe({
 		userVisibleOnly: true,
 		applicationServerKey: urlBase64ToUint8Array(publicKey)
-	});
+	  });
 	console.log('Push Registered');
 
 	// Send Push Notification
